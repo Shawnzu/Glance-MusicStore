@@ -1,0 +1,166 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Musicstore">
+    <!-- Declaring root element with two child elements -->
+        <xs:complexType><!-- Declaring complex type as it has child elements-->
+            <xs:sequence>
+                <xs:element ref="store_detail" maxOccurs="1"/>
+                <xs:element ref="music" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="store_detail">
+    <!-- Declaring the store-detail element-->
+        <xs:complexType><!-- Declaring complex type as it has child elements and one attribute-->
+            <xs:sequence>
+                <xs:element ref="Name"/><!-- Referencing the elements from the below -->
+                <xs:element ref="Info"/>
+                <xs:element ref="Address"/>
+                <xs:element ref="Contact"/>
+                <xs:element ref="Website_address"/>
+                <xs:element ref="Email"/>
+            </xs:sequence>
+            <xs:attribute name="store_id" type="xs:positiveInteger"/><!-- Defining the positiveInteger in the attribute -->
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Name">
+        <xs:complexType><!-- Declaring complex type as it has attribute-->
+            <xs:simpleContent><!-- Defining simpleContent as it has no child elements but only PCDATA-->
+                <xs:extension base="xs:string">
+                    <xs:attribute name="logo" type="xs:string" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Info" type="xs:string"/><!-- Defining simple type element-->
+    <xs:element name="Address">
+        <xs:complexType><!-- Declaring complex type as it has three child elements-->
+            <xs:sequence>
+                <xs:element name="Street" type="xs:string"/>
+                <xs:element name="City" type="xs:string"/>
+                <xs:element name="Country" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Contact">
+        <xs:complexType><!-- Declaring complex type as it has child elements-->
+            <xs:sequence>
+                <xs:element ref="Telephone_No"/>
+                <xs:element ref="Phone_No"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Telephone_No" type="xs:string"/><!-- Defining simple type element-->
+    <xs:element name="Phone_No">
+        <xs:simpleType><!-- Defining simple type element where certain restriction and pattern are set fro phone number-->
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:pattern value="98[0-9]{8}"/>
+                </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="Website_address" type="xs:anyURI"/><!-- Defining simple type element-->
+    <xs:element name="Email"><!-- Defining simple type element where certain restriction and pattern are set for email-->
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Email: ([a-z]|[A-Z])+[@]gmail[.]com"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="music"><!-- Declaring complex type as it has child element-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Song" minOccurs="15" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Song"><!-- Declaring mixed complex type as Song element contains PCDATA along with child elements and attributes-->
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="Title"/>
+                <xs:element ref="Album_name" minOccurs="0" maxOccurs="1"/><!-- Defining element as optional -->
+                <xs:element ref="Singer"/>
+                <xs:element ref="Label" minOccurs="0" maxOccurs="1"/><!-- Defining element as optional -->
+                <xs:element ref="Writers"/>
+                <xs:element ref="Lyricist" minOccurs="0" maxOccurs="1"/><!-- Defining element as optional -->
+                <xs:element ref="Producers"/>
+                <xs:element ref="Director" minOccurs="0" maxOccurs="1"/><!-- Defining element as optional -->
+                <xs:element ref="Release_year" minOccurs="0" maxOccurs="1"/><!-- Defining element as optional -->
+                <xs:element ref="Price"/>
+            </xs:sequence>
+                <xs:attribute ref="category" use="required"/>
+                <xs:attribute name="id" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Title"><!-- Declaring element complex type as it includes attribute-->
+        <xs:complexType>
+            <xs:simpleContent><!-- Defining simple content as it contains only PCDATA with no child element -->
+                <xs:extension base="xs:string">
+                    <xs:attribute name="recorded" type="xs:string" use="optional"/><!-- Attribute is set to optional-->
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Album_name" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:element name="Singer"><!-- Declaring element complex type as it includes attribute-->
+        <xs:complexType>
+            <xs:simpleContent><!-- Defining simple content as it contains only PCDATA with no child element -->
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="performed_by" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Label" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:element name="Writers"><!-- Declaring element complex type as it includes child elements with attribute-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Writer" minOccurs="1" maxOccurs="unbounded"/><!-- Defining the element Writer which must occur atleast one time or multiple times-->
+            </xs:sequence>
+            <xs:attribute ref="no_of_writer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Lyricist" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:element name="Producers"><!-- Declaring element complex type as it includes child elements with attribute-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Producer" minOccurs="1" maxOccurs="unbounded"/><!-- Defining the element Writer which must occur atleast one time or multiple times-->
+            </xs:sequence>
+            <xs:attribute ref="no_of_producer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Director" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:element name="Release_year" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:element name="Price" type="xs:string"/><!-- Declaring element simple type -->
+    <xs:attribute name="category">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"><!-- Defining the attribute with restriction of string data type -->
+            <!-- Setting  the attribute with enumeration values where any one values among them should be the value of the attribute -->
+                <xs:enumeration value="Jazz"/> 
+                <xs:enumeration value="Country"/> 
+                <xs:enumeration value="Rock"/> 
+                <xs:enumeration value="Pop"/> 
+                <xs:enumeration value="Dubstep"/> 
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="performed_by">
+        <xs:simpleType>
+            <xs:restriction base="xs:string"><!-- Setting the restriction on attribute of string data type -->
+                <xs:pattern value="Solo|Duo|Band"/><!-- Setting the pattern on attribute which could contain any one values among them -->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="no_of_writer">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger"><!-- Setting the restriction on attribute of positive integer data type -->
+                <xs:pattern value="[0-9]"/><!-- Setting the pattern on attribute which could contain any number from 0 to 9 -->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="no_of_producer">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger"><!-- Setting the restriction on attribute of positive integer data type -->
+                <xs:pattern value="[0-9]"/><!-- Setting the pattern on attribute which could contain any number from 0 to 9 -->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+</xs:schema>

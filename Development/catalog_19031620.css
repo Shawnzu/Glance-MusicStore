@@ -1,0 +1,197 @@
+            store_detail {
+                background-image: url(Logo.png), url(logo1.png);
+                /* Inserting the logo and background image in element store_detail */
+                background-position: left top, center;
+                background-repeat: no-repeat;
+                background-size: 250px 170px, cover;
+                border: 8px solid rgb(192, 192, 165);
+                border-style: groove;
+                display: block;
+                height: 350px;
+                padding: 5px;
+                background-repeat: no-repeat;
+                border-color: rgb(200, 199, 199);
+            }
+            
+            Name {
+                font-weight: bold;
+                font-family: Verdana;
+                padding-top: 16px;
+                padding-bottom: 70px;
+                font-size: 35px;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 black, 0 -1px white;
+                /* Inserting the shadow in the text */
+            }
+            /* Changing the font size, weight and family of the name of Glaze Music Store */
+            
+            Info {
+                font-family: Helvetica, sans-serif;
+                font-size: 20px;
+                padding-left: 15%;
+                color: brown;
+                position: absolute;
+            }
+            /* Changing the font color, size and family of Info */
+            
+            Address {
+                padding-top: 10%;
+            }
+            
+            Address,
+            Website_address,
+            Email {
+                display: block;
+                font-family: monospace;
+                padding-left: 80%;
+            }
+            
+            Contact {
+                font-family: monospace;
+                padding-left: 80%;
+            }
+            
+            Name {
+                display: block;
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                font-family: Geneva, Verdana, sans-serif;
+            }
+            /* Changing the font size and family and text-aligning in center of Name */
+            
+            Title,
+            Alblum_name,
+            Singer,
+            Label,
+            Writers,
+            Producers,
+            Lyricist,
+            Director,
+            Price {
+                display: block;
+            }
+            /* Displays the elements in new line */
+            
+            music {
+                display: flex;
+                flex-wrap: wrap;
+                background-image: linear-gradient(to right, rgb(253, 22, 207), rgb(255, 255, 61));
+            }
+            /* Changing the display in flex */
+            
+            Song {
+                border: 4px solid silver;
+                margin: 7px;
+                padding: 0.5em;
+                flex: 25%;
+                flex-direction: row;
+                border-radius: 20px;
+                height: 350px;
+                border-style: ridge;
+                color: white;
+            }
+            /* Alloting the flex size of 25% which divides the elements of Song according to it */
+            
+            Song[id="JBM2"] {
+                background-image: url(jazz.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="RCS5"] {
+                background-image: url(rock.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="CPA9"] {
+                background-image: url(country.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="DBB14"] {
+                background-image: url(dubstep.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="JQT1"] {
+                background-image: url(Quick.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="RST3"] {
+                background-image: url(nirvana.jfif);
+                background-size: cover;
+            }
+            
+            Song[id="RWJ4"] {
+                background-image: url(guns.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="CBH7"] {
+                background-image: url(beer.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="CGC8"] {
+                background-image: url(god.jpeg);
+                background-size: cover;
+            }
+            
+            Song[id="RBD6"] {
+                background-image: url(green.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="PBN10"] {
+                background-image: url(better.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="PA11"] {
+                background-image: url(attention.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="PP13"] {
+                background-image: url(perfect.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="PDD12"] {
+                background-image: url(dusk.jpg);
+                background-size: cover;
+            }
+            
+            Song[id="DA15"] {
+                background-image: url(alone.jfif);
+                background-size: cover;
+            }
+            /* Inserting the image in all the songs by denoting the attribute id of each songs */
+            
+            Writer,
+            Producer {
+                display: list-item;
+                list-style-type: decimal;
+                margin-left: 22px;
+            }
+            /* listing the items of writer and producer in an decimal list which is 1, 2, 3..etc */
+            
+            Title {
+                font-weight: bold;
+                font-family: 'Trebuchet MS';
+                text-align: center;
+                font-size: 22px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            /* Changing the font weight, family, size and text aligning in center */
+            
+            Title:hover {
+                border: lightslategray 3px;
+                border-radius: 20px;
+                background-color: rgb(86, 136, 253);
+                height: 20px;
+                padding: 30px;
+                opacity: 95%;
+            }
+            /* Hovering the Title of the song by which changes the backkground color, padding while placing the cursor over the Title */

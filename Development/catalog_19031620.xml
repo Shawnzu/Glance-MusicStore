@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="catalog_19031620.css"?>
+<!-- Linking the CSS file-->
+<!DOCTYPE Musicstore SYSTEM "catalog_19031620.dtd">
+<!-- Linking external DTD file-->
+<Musicstore xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="catalog_19031620.xsd">
+<!-- Linking the Schema file-->
+<!-- Making Musicstore root element -->
+    <store_detail store_id="0281">
+    <!-- Defining child element of Musicstore -->
+        <Name logo="Glaze">Glaze Music Store</Name>
+        <Info>
+        <![CDATA[
+        Welcome to the Glaze's Music Store. We provide CDs and DVDs of songs of different Genres like Pop, Jazz, Rock, Country Music & Dubstep in a affortable price.
+        ]]>
+        <!-- Defining character data -->
+        </Info>
+        <Address>
+            <Street>Location: New Road,</Street>
+            <City>Kathmandu,</City>
+            <Country>Nepal</Country>
+        </Address>
+        <Contact>
+        <Telephone_No>Contact: 071-544281,</Telephone_No>
+        <Phone_No>9847823223</Phone_No>
+        </Contact>
+        <Website_address>Visit: www.GlazeMusicStore.com</Website_address>
+        <Email>Email: GlazeMusic@gmail.com</Email>
+    </store_detail>
+
+    <music>
+    <!-- Defining child element of Musicstore -->
+        <Song category="Jazz" id="JQT1">
+        <!-- Defining child element of music with two attributes-->
+            <Title>Quick Trick</Title>
+            <Album_name>Album: Just Coolin</Album_name>
+            <Singer performed_by="Band">By: Art Blakery &amp; The Jazz Messengers</Singer>Written By:
+            <!-- defining character reference of & -->
+            <Writers no_of_writer="1">
+                <Writer>Bobby Timmons</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Alfred Lion</Producer>
+                <Producer>Zev Feldman</Producer>
+            </Producers>Release Year:
+            <Release_year> 2020</Release_year>
+            <Price>Price: Rs200</Price>
+        </Song>
+        <Song category="Jazz" id="JBM2">
+            <Title>Blue Moon</Title>
+            <Singer performed_by="Solo">By: Billie Holiday</Singer>Written By:
+            <Writers no_of_writer="2">
+                <Writer>Billie Holiday</Writer>
+                <Writer>Richard Rodgers</Writer>
+            </Writers>
+            <Lyricist>Lyricist: Lorenz Hertz</Lyricist>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Norman Granz</Producer>
+            </Producers>Release Year:
+            <Release_year> 1934</Release_year>
+            <Price>Price: Rs200</Price>
+        </Song>
+        <Song category="Rock" id="RST3">
+            <Title>Smells Like Teen Spirit</Title>
+            <Album_name>Album: Nevermind (Deluxe Edition)</Album_name>
+            <Singer performed_by="Band">By: Nirvana</Singer>
+            <Label>Label: DGC</Label>Written By:
+            <Writers no_of_writer="3">
+                <Writer>Dave Grohl</Writer>
+                <Writer>Krist Noveoselic</Writer>
+                <Writer>Kurt Cobain</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Butch Vig</Producer>
+            </Producers>Release Year:
+            <Release_year> 2020</Release_year>
+            <Price>Price: Rs300</Price>
+        </Song>
+        <Song category="Rock" id="RWJ4">
+            <Title>Welcome to the Jungle</Title>
+            <Album_name>Album: Appetite for Destruction</Album_name>
+            <Singer performed_by="Band">By: Guns N&apos; Roses</Singer>
+            <!-- defining character reference of " ' " -->
+            <Label>Label: Geffen</Label>Written By:
+            <Writers no_of_writer="1">
+                <Writer>Guns N&apos; Roses</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Mike Clink</Producer>
+            </Producers>Release year:
+            <Release_year>1987</Release_year>
+            <Price>Price: Rs320</Price>
+        </Song>
+        <Song category="Rock" id="RCS5">
+            <Title recorded="Cello Studios">Chop Suey</Title>
+            <Album_name>Album: Toxicity</Album_name>
+            <Singer performed_by="Band">By: System of A Down</Singer>
+            <Label>Label: Geffen</Label>Written By:
+            <Writers no_of_writer="2">
+                <Writer>Daron Malakian</Writer>
+                <Writer>Serj Tankian</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Rick Rubin</Producer>
+                <Producer>Daron Malakian</Producer>
+            </Producers>Release year:
+            <Release_year>2001</Release_year>
+            <Price>Price: Rs250</Price>
+        </Song>
+        <Song category="Rock" id="RBD6">
+            <Title>Boulevard of Broken Dreams</Title>
+            <Album_name>Album: American Idiot</Album_name>
+            <Singer performed_by="Band">By: Green Day</Singer>
+            <Label>Label: Reprise, Warner Bros.</Label>Written By:
+            <Writers no_of_writer="3">
+                <Writer>Billie Joe Armstrong</Writer>
+                <Writer>Mike Dirnt</Writer>
+                <Writer>Tre Cool</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Rob Cavallo</Producer>
+                <Producer>Green Day</Producer>
+            </Producers>
+            <Price>Price: Rs320</Price>
+        </Song>
+        <Song category="Country" id="CBH7">
+            <Title>Beer Never Broke My Heart</Title>
+            <Album_name>Album: What You See Is What You Get</Album_name>
+            <Singer performed_by="Band">By: Luke Combs</Singer>
+            <Label>Label: Columbia Nashville</Label>Written By:
+            <Writers no_of_writer="3">
+                <Writer>Luke Combs</Writer>
+                <Writer>Randy Montana</Writer>
+                <Writer>Jonathan Singleton</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Scott Moffatt</Producer>
+            </Producers>Release Year:
+            <Release_year> 2019</Release_year>
+            <Price>Price: Rs180</Price>
+        </Song>
+        <Song category="Country" id="CGC8">
+            <Title recorded="American country music">God's Country</Title>
+            <Album_name>Album: God's Country</Album_name>
+            <Singer performed_by="Solo">By: Blake Shelton</Singer>
+            <Label>Label: Warner Bros. Nashville</Label>Written By:
+            <Writers no_of_writer="3">
+                <Writer>Devin Dawson</Writer>
+                <Writer>Jordan Schmidt</Writer>
+                <Writer>Hardy</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Scott Hendricks</Producer>
+            </Producers>Release Year:
+            <Release_year> 2019</Release_year>
+            <Price>Price: Rs180</Price>
+        </Song>
+        <Song category="Country" id="CPA9" >
+            <Title recorded="American country music">Play It Again</Title>
+            <Album_name>Album: Crash My Party</Album_name>
+            <Singer performed_by="Solo">By: Luke Bryan</Singer>
+            <Label>Label: Capitol Nashville</Label>Written By:
+            <Writers no_of_writer="2">
+                <Writer>Dallas Davidson</Writer>
+                <Writer>Ashley Gorley</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Jeff Stevens</Producer>
+            </Producers>Release Year:
+            <Release_year> 2014</Release_year>
+            <Price>Price: Rs200</Price>
+        </Song>
+        <Song category="Pop" id="PBN10">
+            <Title>Better Now</Title>
+            <Album_name>Album: Beerbongs &amp; Bentleys</Album_name>
+            <Singer performed_by="Solo">By: Post Malone</Singer>
+            <Label>Label: Republic</Label>Written By:
+            <Writers no_of_writer="5">
+                <Writer>Post Malone</Writer>
+                <Writer>Louis Bell</Writer>
+                <Writer>Frank Dukes</Writer>
+                <Writer>Billy Walsh</Writer>
+                <Writer>Kaan Gunesberk</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Alfred Lion</Producer>
+                <Producer>Louis Bell</Producer>
+            </Producers>Release Year:
+            <Release_year> 2018</Release_year>
+            <Price>Price: Rs280</Price>
+        </Song>
+        <Song category="Pop" id="PA11">
+            <Title>Attention</Title>
+            <Album_name>Album: Voicenotes</Album_name>
+            <Singer performed_by="Solo">By: Charlie Puth</Singer>
+            <Label>Label: Artist Partner, Atlantic</Label>Written By:
+            <Writers no_of_writer="2">
+                <Writer>Charlie Puth</Writer>
+                <Writer>Jacob Kasher</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Charlie Puth</Producer>
+            </Producers>Release Year:
+            <Release_year> 2017</Release_year>
+            <Price>Price: Rs250</Price>
+        </Song>
+        <Song category="Pop" id="PDD12">
+            <Title recorded="RCA records">Dusk Till Dawn</Title>
+            <Album_name>Album: Icarus Falls</Album_name>
+            <Singer performed_by="Duo">By: Zayn Malik &amp;Sia</Singer>
+            <Label>Label: Republic</Label>Written By:
+            <Writers no_of_writer="5">
+                <Writer>Zayn Malik</Writer>
+                <Writer>Sia Furler</Writer>
+                <Writer>Alex Oriet</Writer>
+                <Writer>David Phelan</Writer>
+                <Writer>Greg Kustin</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="1">
+                <Producer>Greg Kustin</Producer>
+            </Producers>
+            <Director>Director: Marc Webb</Director>Release Year:
+            <Release_year> 2018</Release_year>
+            <Price>Price: Rs280</Price>
+        </Song>
+        <Song category="Pop" id="PP13">
+            <Title>Perfect</Title>
+            <Singer performed_by="Solo">By: Ed Shereen</Singer>
+            <Label>Label: Asylum, Atlantic</Label>Written By:
+            <Writers no_of_writer="1">
+                <Writer>Ed Sheeran</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Ed Sheeran</Producer>
+                <Producer>Will Hicks</Producer>
+            </Producers>
+            <Director>Director: Jason Konin</Director>Release Year:
+            <Release_year> 2017</Release_year>
+            <Price>Price: Rs300</Price>
+        </Song>
+        <Song category="Dubstep" id="DBB14">
+            <Title>Bunker Buster</Title>
+            <Album_name>Album: Bunker Buster</Album_name>
+            <Singer performed_by="Duo">By: Excision &amp; Subtronics</Singer>Written By:
+            <Writers no_of_writer="2">
+                <Writer>Excision</Writer>
+                <Writer>Subtronics</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Alfred Lion</Producer>
+                <Producer>Louis Bell</Producer>
+            </Producers>Release Year: 
+            <Release_year>2021</Release_year>
+            <Price>Price: Rs150</Price>
+        </Song>
+        <Song category="Dubstep" id="DA15">
+            <Title>Alone</Title>
+            <Singer performed_by="Solo">By: Marshmello</Singer>
+            <Label>Label: Monster Cat</Label>Written By:
+            <Writers no_of_writer="1">
+                <Writer>Marshmello</Writer>
+            </Writers>Produced By:
+            <Producers no_of_producer="2">
+                <Producer>Karam Gill</Producer>
+                <Producer>Jack Winter</Producer>
+            </Producers>
+            <Director>Director: Daniel Burke</Director>Year: 
+            <Release_year>2016</Release_year>
+            <Price>Price: Rs220</Price>
+        </Song>
+    </music>
+</Musicstore>
+<!-- Ending the root element -->

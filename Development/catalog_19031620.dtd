@@ -1,0 +1,50 @@
+<!ELEMENT Musicstore (store_detail, music)>
+<!--Declaring the root element first-->
+<!ATTLIST Musicstore xmlns:xs CDATA #REQUIRED>
+<!ATTLIST Musicstore xs:noNamespaceSchemaLocation CDATA #REQUIRED>
+<!--Declaring the attributes of namespace xs which contains the XSD location-->
+<!ELEMENT store_detail (Name,Info,Address,Contact,Website_address,Email)>
+<!--Declaring store_detail element with 6 child elements-->
+<!ATTLIST store_detail store_id CDATA #REQUIRED>
+<!--Declaring the attribute of store_detail store_id which has character data and it mandatory to define it-->
+<!ATTLIST Name logo CDATA #REQUIRED>
+<!ELEMENT Name (#PCDATA)>
+<!--Declaring parsed character data in element Name-->
+<!ELEMENT Info (#PCDATA)>
+<!ELEMENT Address (Street,City,Country)>
+<!--Declaring Address element with 3 child elements-->
+<!ELEMENT Street (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT Contact (Telephone_No,Phone_No)>
+<!--Declaring Contact element with 2 child elements-->
+<!ELEMENT Telephone_No (#PCDATA)>
+<!ELEMENT Phone_No (#PCDATA)>
+<!ELEMENT Website_address (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT music (Song+)>
+<!ELEMENT Song (#PCDATA|Title|Album_name|Singer|Label|Writers|Lyricist|Producers|Director|Release_year|Price)*>
+<!--Declaring the mixed content where the Song element can contain zero or more occurrence of parsed character of data and other 10 elements-->
+<!ATTLIST Song category (Jazz | Pop | Rock | Country | Dubstep) #REQUIRED>
+<!--Declaring the attribute category of Song element which can either have any 5 of the given values and is mandatory to include any one of them-->
+<!ATTLIST Song id ID #REQUIRED>
+<!--Declaring the attribute id which must have an ID type in Song element-->
+<!ELEMENT Title (#PCDATA)>
+<!ATTLIST Title recorded CDATA #IMPLIED>
+<!--Declaring the attribute recorded which can have character data and it is optional to define the attribute Title-->
+<!ELEMENT Album_name (#PCDATA)>
+<!ELEMENT Singer (#PCDATA)>
+<!ATTLIST Singer performed_by CDATA #REQUIRED>
+<!ELEMENT Label (#PCDATA)>
+<!ELEMENT Writers (Writer+)>
+<!--Declaring the element Writers where it must contain 1 or multiple child element Writer-->
+<!ATTLIST Writers no_of_writer CDATA #REQUIRED>
+<!ELEMENT Writer (#PCDATA)>
+<!ELEMENT Lyricist (#PCDATA)>
+<!ELEMENT Producers (Producer+)>
+<!--Declaring the element Producers where it must contain 1 or multiple child element Producer-->
+<!ATTLIST Producers no_of_producer CDATA #REQUIRED>
+<!ELEMENT Producer (#PCDATA)>
+<!ELEMENT Director (#PCDATA)>
+<!ELEMENT Release_year (#PCDATA)>
+<!ELEMENT Price (#PCDATA)>
